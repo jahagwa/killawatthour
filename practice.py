@@ -6,6 +6,6 @@ uptime = float(read_data.split(" ")[0]) / 3600
 
 with open('/sys/class/powercap/intel-rapl:0/energy_uj') as d:
     read_data = d.read()
-uj = int(read_data) *10**-7
+uj = int(read_data) *10**-6
 
-print(uptime/uj * .07)
+print(uj/uptime * .07)
