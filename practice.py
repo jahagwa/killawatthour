@@ -1,3 +1,5 @@
+# This is simply to calculate Kwh's the system is using currently #
+
 with open('/sys/class/powercap/intel-rapl:0/energy_uj') as d:
     read_data = d.read()
 
